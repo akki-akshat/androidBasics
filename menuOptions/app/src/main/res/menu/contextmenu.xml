@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/Check_Eligibility"
+        android:title="Check Eligibility" />
+    <item android:id="@+id/fee"
+        android:title="Course Fee" />
+    <item android:id="@+id/docs"
+        android:title="Required Documents" />
+</menu>

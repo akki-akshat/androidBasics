@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">menuOptions</string>
+    <string-array name="Course_array">
+        <item>BCA</item>
+        <item>MCA</item>
+        <item>BBA</item>
+        <item>MBA</item>
+        <item>BCOM</item>
+        <item>MCOM</item>
+        <item>BTECH</item>
+        <item>MTECH</item>
+    </string-array>
+</resources>

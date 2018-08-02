@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/register"
+        android:icon="@mipmap/registericon"
+        android:title="Register"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/ug"
+                android:title="UG Student" />
+            <item
+                android:id="@+id/pg"
+                android:title="PG Student" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/learnMore"
+        android:icon="@mipmap/learnmore"
+        android:title="Learn More" />
+    <item
+        android:id="@+id/help"
+        android:title="Help" />
+</menu>
