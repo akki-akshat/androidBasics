@@ -6,33 +6,36 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
+            android:icon="@drawable/ic_menu_send"
+            android:title="Send Message" />
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:title="Sent Messages" />
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="Reach Us">
         <menu>
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:title="Contact Us" />
             <item
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:title="Write Us" />
         </menu>
     </item>
-
+    <item android:title="Accounts">
+        <menu>
+            <item
+                android:id="@+id/log_out"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Log Out" />
+            <item
+                android:id="@+id/switch_account"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Switch Account" />
+        </menu>
+    </item>
 </menu>
