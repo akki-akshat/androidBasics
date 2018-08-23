@@ -13,7 +13,7 @@ import android.content.Context;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class    MainActivity extends AppCompatActivity {
     private NotificationManagerCompat notificationManager;
 
     @Override

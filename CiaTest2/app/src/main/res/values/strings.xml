@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">CiaTest2</string>
+    <string name="prev"> &lt; </string>
+    <string name="next"> &gt; </string>
     <string-array name="Class_array">
         <item>STD 1</item>
         <item>STD 2</item>

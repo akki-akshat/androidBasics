@@ -1,6 +1,8 @@
 package com.example.mchugh.navappdrawer;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
@@ -11,7 +13,12 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.TimePicker;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -40,6 +47,9 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        Button sendBtn = findViewById(R.id.send_msg);
+
+
     }
 
     @Override
@@ -67,27 +77,33 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
 
         return super.onOptionsItemSelected(item);
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        if (id == R.id.send_msg) {
+            final sendMessage sendFragment = new sendMessage();
+            fragmentTransaction.add(R.id.fragmentContainer,sendFragment);
+            fragmentTransaction.commit();
+        } else if (id == R.id.sent_msg) {
+            final sentMessages sentFragment = new sentMessages();
+            fragmentTransaction.add(R.id.fragmentContainer2,sentFragment);
+            fragmentTransaction.commit();
+        } else if (id == R.id.contact_us) {
+            Intent j = new Intent(getApplicationContext(), ReachUs.class);
+            j.putExtra("EXTRA","dontOpenFragment");
+            startActivity(j);
+        } else if (id == R.id.write_us) {
+            Intent i = new Intent(getApplicationContext(), ReachUs.class);
+            i.putExtra("EXTRA","openFragment");
+            startActivity(i);
+        } else if (id == R.id.log_out) {
+            System.exit(0);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

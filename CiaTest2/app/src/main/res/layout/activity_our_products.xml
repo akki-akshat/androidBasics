@@ -4,21 +4,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ourProducts">
+    tools:context=".ourProducts"
+    tools:layout_editor_absoluteY="81dp">
 
     <fragment
         android:id="@+id/fragment"
         android:name="com.example.mchugh.ciatest2.BlankFragment"
-        android:layout_width="383dp"
-        android:layout_height="264dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:layout_width="411dp"
+        android:layout_height="404dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
 
     <Button
         android:id="@+id/nextP"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Next Product"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="370dp" />
+        android:layout_width="50dp"
+        android:layout_height="57dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="52dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/next"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.103"
+        app:layout_constraintStart_toEndOf="@+id/prevP"
+        app:layout_constraintTop_toBottomOf="@+id/fragment" />
+
+    <Button
+        android:id="@+id/prevP"
+        android:layout_width="51dp"
+        android:layout_height="57dp"
+        android:layout_marginLeft="144dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/prev"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment" />
+
+    <Button
+        android:id="@+id/addProd"
+        android:layout_width="132dp"
+        android:layout_height="57dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/button_bg_round"
+        android:text="Add  to Cart"
+        android:textColor="@android:color/background_light"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nextP" />
 </android.support.constraint.ConstraintLayout>
