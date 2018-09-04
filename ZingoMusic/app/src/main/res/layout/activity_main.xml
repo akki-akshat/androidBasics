@@ -77,18 +77,18 @@
             app:srcCompat="@mipmap/ic_launcher_forward_fg"
             tools:ignore="MissingConstraints" />
 
-        <ImageButton
-            android:id="@+id/play"
-            android:layout_width="78dp"
-            android:layout_height="59dp"
-            android:layout_marginLeft="12dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="20dp"
-            android:background="@android:color/transparent"
-            app:layout_constraintStart_toEndOf="@+id/back"
-            app:layout_constraintTop_toBottomOf="@+id/seekbar"
-            app:srcCompat="@mipmap/ic_launcher_play_fg"
-            tools:ignore="MissingConstraints" />
+    <ImageButton
+        android:id="@+id/play"
+        android:layout_width="78dp"
+        android:layout_height="59dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toEndOf="@+id/back"
+        app:layout_constraintTop_toBottomOf="@+id/seekbar"
+        app:srcCompat="@mipmap/ic_launcher_play_fg"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/end"
@@ -120,4 +120,36 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/albumArt" />
 
-    </android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/nextSong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="276dp"
+        android:text="NextSong"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.856"
+        app:layout_constraintStart_toEndOf="@+id/prevSong"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/prevSong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="276dp"
+        android:text="PrevSong"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+</android.support.constraint.ConstraintLayout>

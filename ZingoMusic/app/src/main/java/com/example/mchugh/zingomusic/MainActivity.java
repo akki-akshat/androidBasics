@@ -8,14 +8,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.concurrent.TimeUnit;
-
-import static com.example.mchugh.zingomusic.R.raw.*;
 
 public class MainActivity extends AppCompatActivity {
     private ImageButton play;
@@ -41,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
         forward = findViewById(R.id.forward);
         backward = findViewById(R.id.back);
         pause = findViewById(R.id.pause);
+
+        Button nextSong = findViewById(R.id.nextSong);
+        Button prevSong = findViewById(R.id.prevSong);
 
         start = findViewById(R.id.start);
         end = findViewById(R.id.end);
@@ -119,6 +119,15 @@ public class MainActivity extends AppCompatActivity {
                 }else{
                     Toast.makeText(getApplicationContext(),"Cannot jump backward 5 seconds",Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+
+        nextSong.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mediaPlayer.stop();
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.songtwo);
+                mediaPlayer.start();
             }
         });
     }
