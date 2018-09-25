@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<group>
+    <item
+        android:id="@+id/help"
+        android:title="Help">
+    </item>
+    <item
+        android:id="@+id/AboutUs"
+        android:title="About Us">
+    </item>
+    <item
+        android:id="@+id/more"
+        android:title="More"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/Exit"
+                android:title="Exit">
+            </item>
+            <item
+                android:id="@+id/ContactUs"
+                android:title="Contact Us">
+            </item>
+        </menu>
+    </item>
+</group>
+</menu>
